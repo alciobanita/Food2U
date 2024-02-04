@@ -1,0 +1,25 @@
+.header {
+    position: absolute;
+    height: 100px;
+    display: flex;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding-inline: 16px;
+    box-shadow: rgba(0, 0, 0, 1.1) 0px 3px 9px;
+}
+
+.logo {
+    width: 64px;
+    padding-right: 8px;
+}
+
+h1 {
+    color: rgb(234, 123, 12);
+}
