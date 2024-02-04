@@ -1,12 +1,12 @@
 let menus = [
     {
-        "name": "Pizza 1",
+        "name": "Pizza Pepperoni",
         "price": "9.50 €",
         "description": "Pepperoni und Champignons",
         "amount": "1"
     },
     {
-        "name": "Pizza 2",
+        "name": "Pizza Veggie",
         "price": "7.75 €",
         "description": "Veggie lovers: Pepperoni, Sucuck, Zwiebel, Knoblauch, schwarze oder grüne Oliven, Champignons und Oregano.",
         "amount": "1"
@@ -16,11 +16,33 @@ let menus = [
         "price": "6.99 €",
         "description": "Mini-Pizza's mit Tomatensauce, Olivenöl und Mozzarella.",
         "amount": "1"
+    },
+    {
+        "name": "Coke4U",
+        "price": "1.40 €",
+        "amount": "1",
+        "description": "Coca-Cola Getränk 0,33 l"
+    },
+    {
+        "name": "Bier",
+        "price": "1.80 €",
+        "amount": "1",
+        "description": "Herforder  Bockbier 0.33 l"
+    },
+    {
+        "name": "Gerolsteiner mit Kohlensäure",
+        "price": "1.80 €",
+        "amount": "1",
+        "description": "Wasser mit Kohlensäure 1 l"
     }
 ]
 
-let shoppingBasket = [];
-let prices = [];
+let shoppingBasket = [
+    {
+        "names": [],
+        "prices": []
+    }
+];
 
 
 function render() {
@@ -35,38 +57,59 @@ function render() {
         const menu = menus[i];
         menuList.innerHTML += /*html*/`
             <div class="card" onclick="addToBasket()">
-                <h2>${menu['name']}</h2>
-                <p>${menu['description']}</p>
-                <h3>${menu['price']}
+                <div class="menuDescription">
+                    <h2>${menu['name']}</h2>
+                    <p>${menu['description']}</p>
+                    <h3>${menu['price']}
+                </div>
+                <img class="icon d-none" src="./icon/plus.png">
             </div>
         `;
     }
+    updateShoppingBusket();
 }
 
 function generateIndexHTML() {
     return /*html*/`
-        <div class="header"><img class="logo" src="./icon/besteck.png" onclick="goToHomepage()" class="AppIcon"><h1>Food4U</h1></div>
+        <div class="header">
+            <div class="wp-name" onclick="goToHomepage()">
+                <img class="logo" src="./icon/besteck.png" class="AppIcon"><h1>Food4U</h1>
+            </div>
+        </div>
         <div class="mainArea">
             <div id="menuList" class="menusArea"></div>
-            <div id="basket" class="basketArea"></div>
+            <div class="basketArea">
+                <h3>Warenkorb</h3>
+                <div class="spacer"></div>
+                <div  id="basketContent">
+                    <ul>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sequi quos recusandae exercitationem. Laborum aliquam, non sunt veniam eos vel odio aperiam in itaque rerum cum blanditiis ipsam fugiat facilis?</ul>
+                </div>
+                <div class="spacer"></div>
+                <div id="basketValue">Bestellwert: <span id="totalPrice"></span> €</div>
+                <button type="submit" class="btn btn-primary" onclick="sendOrder()">Bestellen</button>
+            </div>
         </div>
         `;
 }
 
-function navigateToHome() {
-    window.location.href = "./index.html";
+function goToHomepage() {
+    render();
 }
 
 function addToBasket(name, price) {
-    names.push(name);
+    shoppingBasket['names'].push(name);
+    shoppingBasket['prices'].push(price);
+    updateShoppigBasket();
+    console.log('Hallo!');
 }
 
 function updateShoppingBusket() {
-    let sum = 0;
-    for (let i = 0; i < prices.length; i++) {
-        sum += prices[i];
+    let sum = 0.00;
+    for (let i = 0; i < shoppingBasket['prices'].length; i++) {
+        sum += shoppingBasket['prices'][i];
     }
 
     let finalSum = sum + 3.95;
-    document.getElementById().innerHTML = finalSum;
+    document.getElementById('totalPrice').innerHTML = finalSum;
 }
+

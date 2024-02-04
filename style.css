@@ -1,23 +1,39 @@
-body{
+body {
     margin: 0;
     font-family: 'Sarala';
+    scroll-behavior: smooth;
 }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
 .header {
     position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
     z-index: 9000;
     height: 100px;
     display: flex;
-    width: -webkit-fill-available;
+    width: 100%;
+    max-width: -webkit-fill-available;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding-inline: 16px;
     box-shadow: rgba(0, 0, 0, 1.1) 0px 3px 9px;
+}
+
+.wp-name {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .logo {
@@ -28,31 +44,86 @@ body{
 h1 {
     color: rgb(234, 123, 12);
 }
-.mainArea{
+
+.mainArea {
     position: relative;
     display: flex;
-    flex-grow: 1;   
-    flex-shrink: 1;
-    flex-basis: auto;
-    font-size: 1em;
+    height: calc(100vh-100px);
+   font-size: 1em;
     line-height: normal;
-    overflow-y: hidden;
     text-align: start;
-}
-.menusArea{
-    margin-left: 16px;
-    display: block;
-    flex: 1;
+    overflow: hidden;
 }
 
-.basketArea{
-    float: right;
-    cursor: pointer;
-    width: 300px;
+.menusArea {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    flex: 1;
+    overflow: auto;
 }
+
+.basketArea {
+    float: right;
+    width: 300px;
+    height: calc(100vh -100px);
+    max-height: -webkit-fill-available;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 5;
+    margin-block: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacer {
+    height: 1px;
+    background-color: lightgrey;
+    width: 100px;
+}
+
 .card {
+    display: flex;
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 16px;
     margin: 20px;
     padding: 10px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+
+}
+
+.menuDescription {
+    flex: 1;
+    padding: 6px;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+}
+
+.btn{
+background-color: rgb(255, 152, 0);
+    font-weight: 600;
+    border-radius: 6px;
+    font-size: larger;
+    cursor: pointer;
+    text-align: center;
+    line-height: 3em;
+    transition: all .2s ease-in-out;
+    /* -webkit-appearance: none; */
+    outline: none;
+
 }
