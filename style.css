@@ -1,11 +1,16 @@
+body{
+    margin: 0;
+    font-family: 'Sarala';
+}
 .header {
-    position: absolute;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
     height: 100px;
     display: flex;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    width: -webkit-fill-available;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
@@ -17,9 +22,39 @@
 
 .logo {
     width: 64px;
-    padding-right: 8px;
+    padding-inline: 16px;
 }
 
 h1 {
     color: rgb(234, 123, 12);
 }
+.mainArea{
+    position: relative;
+    display: flex;
+    flex-grow: 1;   
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-size: 1em;
+    line-height: normal;
+    overflow-y: hidden;
+    text-align: start;
+}
+.menusArea{
+    margin-left: 16px;
+    display: block;
+    flex: 1;
+}
+
+.basketArea{
+    float: right;
+    cursor: pointer;
+    width: 300px;
+}
+.card {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.card
