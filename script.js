@@ -75,10 +75,11 @@ function generateIndexHTML() {
             <div class="wp-name" onclick="goToHomepage()">
                 <img class="logo" src="./icon/besteck.png" class="AppIcon"><h1>Food4U</h1>
             </div>
+            <img class="logoBasket" src="./icon/basket.png" onclick="showBasket()">
         </div>
         <div class="mainArea">
             <div id="menuList" class="menusArea"></div>
-            <div class="basketArea">
+            <div id="openBasket" class="basketArea">
                 <h3>Warenkorb</h3>
                 <div class="spacer"></div>
                 <div  id="basketContent">
@@ -123,3 +124,6 @@ function updateShoppingBusket() {
     document.getElementById('totalPrice').innerHTML = finalSum;
 }
 
+function showBasket() {
+    addToBasket();
+}

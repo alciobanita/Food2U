@@ -41,6 +41,11 @@ body {
     padding-inline: 16px;
 }
 
+.logoBasket {
+    width: 64px;
+    padding-inline: 16px;
+}
+
 h1 {
     color: rgb(234, 123, 12);
 }
@@ -82,6 +87,7 @@ h1 {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    margin-right: 36px;
 }
 
 .spacer {
@@ -145,4 +151,24 @@ h1 {
     filter: brightness(130%);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     scale: 1.05;
+}
+
+@media (max-width: 678px) {
+    .basketArea {
+        display: none;
+    }
+
+    .addIcon {
+        opacity: 100%;
+    }
+
+    .menusArea {
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 679px) {
+    .logoBasket {
+        opacity: 0;
+    }
 }
