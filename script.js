@@ -7,31 +7,31 @@ let menus = [
     },
     {
         "name": "Pizza Veggie",
-        "price": "7.75 €",
+        "price": "8.75 €",
         "description": "Veggie lovers: Pepperoni, Sucuck, Zwiebel, Knoblauch, schwarze oder grüne Oliven, Champignons und Oregano.",
         "amount": "1"
     },
     {
         "name": "Pizza Rolls",
-        "price": "6.99 €",
-        "description": "Mini-Pizza's mit Tomatensauce, Olivenöl und Mozzarella.",
+        "price": "7.99 €",
+        "description": "6 Mini-Pizza Rolls mit Tomatensauce, Olivenöl, Pepperoni, Schinken und mit Mozzarella überbacken.",
         "amount": "1"
     },
     {
         "name": "Coke4U",
-        "price": "1.40 €",
+        "price": "2.40 €",
         "amount": "1",
         "description": "Coca-Cola Getränk 0,33 l"
     },
     {
         "name": "Bier",
-        "price": "1.80 €",
+        "price": "3,25 €",
         "amount": "1",
         "description": "Herforder  Bockbier 0.33 l"
     },
     {
         "name": "Gerolsteiner mit Kohlensäure",
-        "price": "1.80 €",
+        "price": "2.80 €",
         "amount": "1",
         "description": "Wasser mit Kohlensäure 1 l"
     }
@@ -62,7 +62,7 @@ function render() {
                     <p>${menu['description']}</p>
                     <h3>${menu['price']}
                 </div>
-                <img class="icon d-none" src="./icon/plus.png">
+                <img class="addIcon" src="./icon/plus.png">
             </div>
         `;
     }
@@ -94,11 +94,21 @@ function generateIndexHTML() {
 
 function goToHomepage() {
     render();
+    updateShoppingBusket();
 }
 
 function addToBasket(name, price) {
-    shoppingBasket['names'].push(name);
-    shoppingBasket['prices'].push(price);
+    for (let j = 0; j < menus['name'].length; j++) {
+        let name = menus['name'][j];
+        
+        shoppingBasket['names'].push(name);
+    }
+
+    for (let t = 0; t < menus['price'].length; t++) {
+        let price = menus['price'][t];
+        
+        shoppingBasket['prices'].push(price);
+    }
     updateShoppigBasket();
     console.log('Hallo!');
 }
