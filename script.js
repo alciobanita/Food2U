@@ -18,7 +18,7 @@ let menus = [
         "amount": "1"
     },
     {
-        "name": "Coke4U",
+        "name": "Coke",
         "price": "2.40 €",
         "amount": "1",
         "description": "Coca-Cola Getränk 0,33 l"
@@ -73,7 +73,7 @@ function generateIndexHTML() {
     return /*html*/`
         <div class="header">
             <div class="wp-name" onclick="goToHomepage()">
-                <img class="logo" src="./icon/besteck.png" class="AppIcon"><h1>Food4U</h1>
+                <img class="logo" src="./icon/besteck.png" class="AppIcon"><h1>Food2U</h1>
             </div>
             <img class="logoBasket" src="./icon/basket.png" onclick="showBasket()">
         </div>
