@@ -43,7 +43,13 @@ body {
 
 .logoBasket {
     width: 64px;
-    padding-inline: 16px;
+    padding-inline: 42px;
+}
+
+.logoBasket:hover {
+    filter: brightness(130%);
+    scale: 1.05;
+    cursor: pointer;
 }
 
 h1 {
@@ -64,11 +70,15 @@ h1 {
     margin-left: 16px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-content: flex-start;
-
+    height: calc(100vh - 100px);
     flex: 1;
     overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .basketArea {
