@@ -36,6 +36,11 @@ body {
     cursor: pointer;
 }
 
+.wp-name:hover {
+    filter: brightness(110%);
+    cursor: pointer;
+}
+
 .logo {
     width: 64px;
     padding-inline: 16px;
@@ -76,6 +81,7 @@ h1 {
     overflow: auto;
     scrollbar-width: none;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+
     &::-webkit-scrollbar {
         display: none;
     }
