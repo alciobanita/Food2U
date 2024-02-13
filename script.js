@@ -77,16 +77,22 @@ function generateIndexHTML() {
             </div>
             <img class="logoBasket" src="./icon/basket.png" onclick="showBasket()">
         </div>
+        <div class="restaurant">
+            <h1 class="restName" id="r-Name">Pizzeria Belladona</h1>
+            <!-- <button id="loadMenuBtn" onclick="getMenusFromServer()">Load Menu</button> -->
+        </div>
         <div class="mainArea">
             <div id="menuList" class="menusArea"></div>
             <div id="openBasket" class="basketArea">
                 <h3>Warenkorb</h3>
                 <div class="spacer"></div>
-                <div  id="basketContent">
-                    <ul>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sequi quos recusandae exercitationem. Laborum aliquam, non sunt veniam eos vel odio aperiam in itaque rerum cum blanditiis ipsam fugiat facilis?</ul>
+                <div class="items" id="basketContent">
+                    <h4>Fülle deinen Warenkorb</h3>
+                    <span class="lorem">Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</span>
                 </div>
                 <div class="spacer"></div>
-                <div id="basketValue">Bestellwert: <span id="totalPrice"></span> €</div>
+                <div id="basketValue">Bestellwert: <span id="totalPrice">0.00</span> €</div>
+                <div class="spacer"></div>
                 <button type="submit" class="btn btn-primary" onclick="sendOrder()">Bestellen</button>
             </div>
         </div>
@@ -101,13 +107,13 @@ function goToHomepage() {
 function addToBasket(name, price) {
     for (let j = 0; j < menus['name'].length; j++) {
         let name = menus['name'][j];
-        
+
         shoppingBasket['names'].push(name);
     }
 
     for (let t = 0; t < menus['price'].length; t++) {
         let price = menus['price'][t];
-        
+
         shoppingBasket['prices'].push(price);
     }
     updateShoppigBasket();

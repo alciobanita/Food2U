@@ -2,7 +2,9 @@ body {
     margin: 0;
     font-family: 'Sarala';
     scroll-behavior: smooth;
-}
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;}
 
 .content {
     display: flex;
@@ -61,10 +63,30 @@ h1 {
     color: rgb(234, 123, 12);
 }
 
+.restaurant {
+    z-index: 9000;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    background-image: url(./img/pizza3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 1.1) 0px 3px 9px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.restName {
+    padding-inline-end: 80px;
+}
+
 .mainArea {
     position: relative;
     display: flex;
-    height: calc(100vh-100px);
+    height: calc(100vh-300px);
+
     font-size: 1em;
     line-height: normal;
     text-align: start;
@@ -89,7 +111,7 @@ h1 {
 
 .basketArea {
     float: right;
-    width: 300px;
+    width: 400px;
     height: calc(100vh -100px);
     max-height: -webkit-fill-available;
     border: 2px solid rgba(0, 0, 0, 0.1);
@@ -103,14 +125,32 @@ h1 {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    margin-right: 36px;
+    margin-right: 16px;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-inline: 48px;
+}
+
+.lorem{
+    display: flex;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin-bottom: 16px;
 }
 
 .spacer {
     height: 1px;
     width: 100%;
     background-color: lightgrey;
-    width: 100px;
+    width: 70%;
+    margin-block: 14px;
 }
 
 .card {
@@ -169,7 +209,7 @@ h1 {
     scale: 1.05;
 }
 
-@media (max-width: 678px) {
+@media (max-width: 900px) {
     .basketArea {
         display: none;
     }
@@ -180,10 +220,20 @@ h1 {
 
     .menusArea {
         margin-left: 0px;
+
+    }
+
+    .restaurant {
+        height: 100px;
+    }
+
+    .restName {
+        font-size: x-large;
+        padding-inline-end: 32px;
     }
 }
 
-@media (min-width: 679px) {
+@media (min-width: 901px) {
     .logoBasket {
         opacity: 0;
     }
