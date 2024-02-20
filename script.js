@@ -79,7 +79,6 @@ function generateIndexHTML() {
         </div>
         <div class="restaurant">
             <h1 class="restName" id="r-Name">Pizzeria Belladona</h1>
-            <!-- <button id="loadMenuBtn" onclick="getMenusFromServer()">Load Menu</button> -->
         </div>
         <div class="mainArea">
             <div id="menuList" class="menusArea"></div>
@@ -88,7 +87,7 @@ function generateIndexHTML() {
                 <div class="spacer"></div>
                 <div class="items" id="basketContent">
                     <h4>Fülle deinen Warenkorb</h3>
-                    <span class="lorem">Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</span>
+                    <span class="infoBasket">Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</span>
                 </div>
                 <div class="spacer"></div>
                 <div id="basketValue">Bestellwert: <span id="totalPrice">0.00</span> €</div>
@@ -97,6 +96,13 @@ function generateIndexHTML() {
             </div>
         </div>
         `;
+        generateBasketHTML();
+}
+
+function generateBasketHTML(){
+    return /*html*/`
+
+    `;
 }
 
 function goToHomepage() {
