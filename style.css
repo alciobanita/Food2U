@@ -4,7 +4,8 @@ body {
     scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
-    scrollbar-width: none;}
+    scrollbar-width: none;
+}
 
 .content {
     display: flex;
@@ -48,17 +49,6 @@ body {
     padding-inline: 16px;
 }
 
-.logoBasket {
-    width: 64px;
-    padding-inline: 42px;
-}
-
-.logoBasket:hover {
-    filter: brightness(130%);
-    scale: 1.05;
-    cursor: pointer;
-}
-
 h1 {
     color: rgb(234, 123, 12);
 }
@@ -86,7 +76,6 @@ h1 {
     position: relative;
     display: flex;
     height: calc(100vh - 300px);
-
     font-size: 1em;
     line-height: normal;
     text-align: start;
@@ -103,7 +92,6 @@ h1 {
     overflow: auto;
     scrollbar-width: none;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-
     &::-webkit-scrollbar {
         display: none;
     }
@@ -137,13 +125,17 @@ h1 {
     margin-inline: 48px;
 }
 
-.infoBasket{
+.infoBasket {
     display: flex;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
     margin-bottom: 16px;
     flex: 1;
+}
+
+.message {
+    font-size: x-small;
 }
 
 .spacer {
@@ -210,18 +202,45 @@ h1 {
     scale: 1.05;
 }
 
-@media (max-width: 900px) {
-    .basketArea {
-        display: none;
-    }
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    padding: 1rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.75);
+}
 
+.footer a{
+    color: rgb(234, 123, 12);
+    margin: 0 .5rem;
+    text-decoration: none;
+    transition: color .2s ease-in-out;
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    .mainArea{
+        flex-flow: column-reverse nowrap;
+        
+    }
+    .basketArea{
+        width:  100%;
+        margin-left: 16px;
+        margin-right: 16px;
+        height: 300px;
+    }
     .addIcon {
         opacity: 100%;
     }
 
     .menusArea {
         margin-left: 0px;
-
+        height: calc(100vh - 100px);
     }
 
     .restaurant {
@@ -231,11 +250,5 @@ h1 {
     .restName {
         font-size: x-large;
         padding-inline-end: 32px;
-    }
-}
-
-@media (min-width: 901px) {
-    .logoBasket {
-        opacity: 0;
     }
 }
