@@ -91,7 +91,7 @@ function generateIndexHTML() {
                 <h3>Warenkorb</h3>
                 <div class="basketStyle">
                     <div class="spacer1"></div>
-                    <div class="column">
+                    <div class="column basketColumn">
                         <div class="items" id="basketContent">
                             <h4>Fülle deinen Warenkorb</h3>
                             <span class="infoBasket">Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</span>
