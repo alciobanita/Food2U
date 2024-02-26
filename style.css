@@ -75,7 +75,7 @@ h1 {
 .mainArea {
     position: relative;
     display: flex;
-    height: calc(100vh - 300px);
+    height: calc(100vh - 358px);
     font-size: 1em;
     line-height: normal;
     text-align: start;
@@ -86,12 +86,12 @@ h1 {
     margin-left: 16px;
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
-    height: calc(100vh - 300px);
+    height: calc(100vh - 358px);
     flex: 1;
     overflow: auto;
     scrollbar-width: none;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+
     &::-webkit-scrollbar {
         display: none;
     }
@@ -100,7 +100,7 @@ h1 {
 .basketArea {
     float: right;
     width: 400px;
-    height: calc(100vh -300px);
+    height: calc(100vh - 400px);
     max-height: -webkit-fill-available;
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 16px;
@@ -113,7 +113,15 @@ h1 {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    margin-right: 16px;
+    /* margin-right: 16px; */
+}
+
+.basketStyle {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .items {
@@ -121,8 +129,14 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
-    margin-inline: 48px;
+    overflow: auto;
+    scrollbar-width: none;
+    flex: 1;
+}
+
+.basketItem {
+    flex: 1;
+    width: max-content;
 }
 
 .infoBasket {
@@ -134,6 +148,11 @@ h1 {
     flex: 1;
 }
 
+.b_value {
+    display: flex;
+    justify-content: center;
+}
+
 .message {
     font-size: x-small;
 }
@@ -142,8 +161,27 @@ h1 {
     height: 1px;
     width: 100%;
     background-color: lightgrey;
-    width: 70%;
     margin-block: 14px;
+}
+
+.spacer1 {
+    height: 1px;
+    width: 100%;
+    background-color: lightgrey;
+    margin-block: 14px;
+}
+
+.spacer2 {
+    height: 1px;
+    width: 100%;
+    background-color: lightgrey;
+    margin-block: 14px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 334px;
 }
 
 .card {
@@ -202,7 +240,7 @@ h1 {
     scale: 1.05;
 }
 
-.footer{
+.footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -211,36 +249,46 @@ h1 {
     justify-content: space-between;
     align-items: center;
     z-index: 1;
-    padding: 1rem;
+    padding: 16px;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.75);
 }
 
-.footer a{
+.footer a {
     color: rgb(234, 123, 12);
     margin: 0 .5rem;
     text-decoration: none;
     transition: color .2s ease-in-out;
     cursor: pointer;
 }
+
 @media (max-width: 900px) {
-    .mainArea{
+    .mainArea {
         flex-flow: column-reverse nowrap;
-        
+        height: calc(100vh - 258px);
     }
-    .basketArea{
-        width:  100%;
-        margin-left: 16px;
-        margin-right: 16px;
+
+    .basketArea {
         height: 300px;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 1.1) 0px 3px 9px;
+        margin-top: 0;
+        width: 100%;
+        border-radius: 0%;
     }
+
+    .basketStyle {
+        flex-direction: row;
+        margin-inline: 3px;
+        max-width: -webkit-fill-available;
+    }
+
     .addIcon {
         opacity: 100%;
     }
 
     .menusArea {
         margin-left: 0px;
-        height: calc(100vh - 100px);
     }
 
     .restaurant {
@@ -250,5 +298,51 @@ h1 {
     .restName {
         font-size: x-large;
         padding-inline-end: 32px;
+    }
+
+    .items {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-inline: 52px;
+        align-items: center;
+        height: 168px;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: max-content;
+    }
+
+    .spacer1 {
+        display: none;
+    }
+
+    .spacer2 {
+        display: none;
+    }
+}
+
+@media (max-width: 635px) {
+    body {
+        font-size: small;
+    }
+
+    .basketArea {
+        height: 236px;
+    }
+
+    .column {
+        max-width: fit-content;
+    }
+
+    .basketArea {
+        max-width: -webkit-fill-available;
+    }
+
+    .items {
+        margin-inline: 21px;
     }
 }

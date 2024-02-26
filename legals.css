@@ -1,0 +1,22 @@
+body {
+    font-family: 'Sarala';
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;
+    padding: 32px;
+}
+
+h1 {
+    color: rgb(234, 123, 12);
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+    color: rgb(234, 123, 12);
+    cursor: pointer;
+}
+
+a:-webkit-any-link:hover {
+font-weight: bold;
+}

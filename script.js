@@ -73,7 +73,6 @@ function render() {
             </div>
         `;
     }
-    updateShoppingBusket();
 }
 
 function generateIndexHTML() {
@@ -91,21 +90,25 @@ function generateIndexHTML() {
             <div id="openBasket" class="basketArea">
                 <h3>Warenkorb</h3>
                 <div class="basketStyle">
-                    <div class="spacer"></div>
-                    <div class="items" id="basketContent">
-                        <h4>Fülle deinen Warenkorb</h3>
-                        <span class="infoBasket">Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</span>
+                    <div class="spacer1"></div>
+                    <div class="column">
+                        <div class="items" id="basketContent">
+                            <h4>Fülle deinen Warenkorb</h3>
+                            <span class="infoBasket">Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</span>
+                        </div>
                     </div>
-                    <div class="spacer"></div>
-                    <div id="basketValue">Bestellwert: <span id="totalPrice">0.00</span> €</div>
-                    <div class="spacer"></div>
-                    <p class="message">Zu deiner Bestellung werden 3,95 € Versandkosten berechnet.</p><br><br>
-                    <button type="submit" class="btn btn-primary" onclick="sendOrder()">Bestellen</button>
-            
+                    <div class="spacer2"></div>
+                    <div class="column">
+                        <div class="b_value" id="basketValue">Bestellwert:&ensp;  <b><span id="totalPrice"> 0.00</span>&nbsp;€</b></div>
+                        <div class="spacer"></div>
+                        <p class="message b_value">Zu deiner Bestellung werden 3,95 € Versandkosten berechnet.</p>
+                        <button type="submit" class="btn btn-primary" onclick="sendOrder()">Bestellen</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="footer">
-            &copy; Food2U 2024  <div><a href="#impressum">Impressum</a> |  <a href="#datenschutz">Datenschutzerklärung</a></div>
+            &copy; Food2U 2024<div><a href="impressum.html">Impressum</a> |  <a href="datenschutz.html">Datenschutzerklärung</a></div>
         </div>
         </div>
     `;
