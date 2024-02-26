@@ -315,6 +315,7 @@ h1 {
         flex-direction: column;
         justify-content: center;
         width: max-content;
+        margin-inline: 15px
     }
 
     .spacer1 {
@@ -328,7 +329,15 @@ h1 {
 
 @media (max-width: 635px) {
     body {
-        font-size: small;
+        font-size: x-small;
+    }
+
+    .header {
+        height: 80px;
+    }
+
+    .mainArea {
+        height: calc(100vh - 230px);
     }
 
     .basketArea {
@@ -344,6 +353,6 @@ h1 {
     }
 
     .items {
-        margin-inline: 21px;
+        margin-inline: 0px;
     }
 }
