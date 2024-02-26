@@ -186,6 +186,7 @@ h1 {
 
 .basketColumn {
     overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .card {
