@@ -73,6 +73,9 @@ function render() {
             </div>
         `;
     }
+
+    let openBasket = document.getElementById('openBasket')
+    openBasket.innerHTML = generateBasketHTML();
 }
 
 function generateIndexHTML() {
@@ -88,23 +91,6 @@ function generateIndexHTML() {
         <div class="mainArea">
             <div id="menuList" class="menusArea"></div>
             <div id="openBasket" class="basketArea">
-                <h3>Warenkorb</h3>
-                <div class="basketStyle">
-                    <div class="spacer1"></div>
-                    <div class="column basketColumn">
-                        <div class="items" id="basketContent">
-                            <h4>Fülle deinen Warenkorb</h3>
-                            <span class="infoBasket">Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</span>
-                        </div>
-                    </div>
-                    <div class="spacer2"></div>
-                    <div class="column">
-                        <div class="b_value" id="basketValue">Bestellwert:&ensp;  <b><span id="totalPrice"> 0.00</span>&nbsp;€</b></div>
-                        <div class="spacer"></div>
-                        <p class="message b_value">Zu deiner Bestellung werden 3,95 € Versandkosten berechnet.</p>
-                        <button type="submit" class="btn btn-primary" onclick="sendOrder()">Bestellen</button>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="footer">
@@ -112,6 +98,30 @@ function generateIndexHTML() {
         </div>
         </div>
     `;
+}
+
+function generateBasketHTML(){
+    return /*html*/`
+    <div class="basketArea">
+        <h3>Warenkorb</h3>
+        <div class="basketStyle">
+            <div class="spacer1"></div>
+            <div class="basketColumn">
+                <div class="items" id="basketContent">
+                    <h4>Fülle deinen Warenkorb</h3>
+                    <span class="infoBasket">Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</span>
+                </div>
+            </div>
+            <div class="spacer2"></div>
+            <div class="column">
+                <div class="b_value" id="basketValue">Bestellwert:&ensp;  <b><span id="totalPrice"> 0.00</span>&nbsp;€</b></div>
+                <div class="spacer"></div>
+                <p class="message b_value">Zu deiner Bestellung werden 3,95 € Versandkosten berechnet.</p>
+                <button type="submit" class="btn btn-primary" onclick="sendOrder()">Bestellen</button>
+            </div>
+        </div>
+    </div>
+`;
 }
 
 function goToHomepage() {
