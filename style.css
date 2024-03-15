@@ -28,7 +28,7 @@ body {
     align-items: center;
     padding-inline: 16px;
     box-shadow: rgba(0, 0, 0, 1.1) 0px 3px 9px;
-    background-color: rgb(234, 123, 12);
+    background-color: #fff;
 }
 
 .wp-name {
@@ -51,7 +51,7 @@ body {
 }
 
 h1 {
-    color: #fff;
+    color: rgb(234, 123, 12);
 }
 
 .restaurant {
@@ -277,15 +277,17 @@ h1 {
         height: 300px;
         border: none;
         box-shadow: rgba(0, 0, 0, 1.1) 0px 3px 9px;
-        margin-top: 0;
+        margin-top: 0px;
+        margin-bottom: 0px;
         width: 100%;
         border-radius: 0%;
     }
 
     .basketStyle {
         flex-direction: row;
-        margin-inline: 3px;
-        max-width: -webkit-fill-available;
+        justify-content: space-around;
+        align-items: stretch;
+        font-size: 1em;
     }
 
     .addIcon {
@@ -332,8 +334,9 @@ h1 {
 }
 
 @media (max-width: 635px) {
+
     body {
-        font-size: x-small;
+        font-size: 16px;
     }
 
     .header {
@@ -344,13 +347,21 @@ h1 {
         height: calc(100vh - 230px);
     }
 
+    .basketStyle {
+        justify-content: space-around;
+        width: 100vw;
+    }
+
     .basketArea {
-        height: 236px;
+        height: 270px;
         margin-right: 0px;
+        margin-bottom: 0px;
     }
 
     .column {
-        max-width: fit-content;
+        max-width: min-content;
+        margin-inline: 3px;
+        justify-content: center;
     }
 
     .basketArea {
@@ -359,5 +370,15 @@ h1 {
 
     .items {
         margin-inline: 0px;
+        width: max-content;
+        max-width: fit-content;
+    }
+
+    .basketColumn {
+        width: fit-content;
+    }
+
+    .footer {
+        font-size: 12px;
     }
 }

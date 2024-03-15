@@ -30,13 +30,13 @@ let menus = [
         "description": "Herforder  Bockbier 0.33 l"
     },
     {
-        "name": "S. Pellegrino medium",
+        "name": "Aqua medium",
         "price": "4.80 €",
         "amount": "1",
         "description": "Wasser mit Kohlensäure 1 l"
     },
     {
-        "name": "S. Pellegrino still",
+        "name": "Aqua still",
         "price": "3.80 €",
         "amount": "1",
         "description": "Wasser ohne Kohlensäure 1 l"
