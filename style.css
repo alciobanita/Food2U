@@ -288,6 +288,7 @@ h1 {
         justify-content: space-around;
         align-items: stretch;
         font-size: 1em;
+        width: -webkit-fill-available;
     }
 
     .addIcon {
@@ -314,6 +315,9 @@ h1 {
         margin-inline: 52px;
         align-items: center;
         height: 168px;
+        margin-inline: 0px;
+        width: max-content;
+        max-width: fit-content;
     }
 
     .column {
@@ -360,18 +364,12 @@ h1 {
 
     .column {
         max-width: min-content;
-        margin-inline: 3px;
+        margin-inline: 8px;
         justify-content: center;
     }
 
     .basketArea {
         max-width: -webkit-fill-available;
-    }
-
-    .items {
-        margin-inline: 0px;
-        width: max-content;
-        max-width: fit-content;
     }
 
     .basketColumn {
